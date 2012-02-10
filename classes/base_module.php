@@ -2,7 +2,18 @@
 
 abstract class Base_Module {
 	
+	/**
+	 * @var	object
+	 */
+	protected $EE;
 	
+	/**
+	 * Constructor
+	 */
+	public function __construct()
+	{
+		$this->EE =& get_instance();
+	}
 	
 }
 
