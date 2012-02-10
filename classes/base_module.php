@@ -84,6 +84,24 @@ abstract class Base_Module_UPD {
 
 abstract class Base_Module_MCP {
 	
+	/**
+	 * @var	object
+	 */
+	protected $EE;
 	
+	/**
+	 * @var	string
+	 */
+	protected $base_url = '';
+	
+	/**
+	 * Constructor
+	 */
+	public function __construct()
+	{
+		$this->EE =& get_instance();
+		
+		$this->base_url = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=' . strtolower(str_replace('_mcp', '', get_class($this))) . AMP.'method=';
+	}
 	
 }
