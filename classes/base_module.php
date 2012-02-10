@@ -112,6 +112,7 @@ abstract class Base_Module_MCP {
 	{
 		$this->EE =& get_instance();
 		
+		// set the base control panel url for this module
 		$this->base_url = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=' . strtolower(str_replace('_mcp', '', get_class($this))) . AMP.'method=';
 	}
 	
